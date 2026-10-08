@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07100f">
+<meta name="description" content="Masters Union Nations — The Global Boardroom. 28–29 November 2026, Gurugram.">
+<title>Masters Union Nations — The Global Boardroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="locked">
+<div class="noise">
+</div>
+<div class="pointer-light" id="pointerLight">
+</div>
+<section class="access" id="access" aria-labelledby="accessTitle">
+<div class="access-grid">
+</div>
+<div class="access-copy">
+<p class="eyebrow">
+<span class="live-dot">
+</span> Diplomatic network · 2026</p>
+<h1 id="accessTitle">Your seat at the<br>
+<em>Global Boardroom</em>
+</h1>
+<p>Identity clearance is required to enter the summit.</p>
+<div class="access-meta">
+<span>28—29 NOV 2026</span>
+<span>GURUGRAM · IN</span>
+</div>
+</div>
+<form class="credential" id="credentialForm" autocomplete="off">
+<div class="lanyard">
+</div>
+<div class="credential-shine">
+</div>
+<div class="scanline">
+</div>
+<div class="credential-head">
+<span class="seal">MU<br>N</span>
+<span>DELEGATE ACCESS<br>
+<b>GB—26</b>
+</span>
+<i id="gateLed">
+</i>
+</div>
+<div class="portrait">
+<div class="portrait-rings">
+</div>
+<span id="initials">ID</span>
+<small>BIOMETRIC<br>CAPTURE</small>
+</div>
+<label for="delegateName">IDENTITY / FULL NAME</label>
+<input id="delegateName" required maxlength="36" placeholder="Enter delegate name" aria-describedby="scanStatus">
+<div class="credential-code">
+<span>AUTH / 28.11.26</span>
+<span>LEVEL / DELEGATE</span>
+</div>
+<button class="primary" id="verifyButton" type="submit">
+<span>Verify identity</span>
+<b>→</b>
+</button>
+<p class="scan-status" id="scanStatus">Awaiting credentials</p>
+</form>
+</section>
+<header class="nav" id="nav">
+<a class="wordmark" href="#boardroom">
+<span>MU</span> Masters Union <b>Nations</b>
+</a>
+<nav>
+<a href="#boardroom">Boardroom</a>
+<a href="#prizes">Prizes</a>
+<a href="#applications">Applications</a>
+<a href="#contact">Contact</a>
+</nav>
+<button class="sound" id="soundToggle" aria-pressed="false">
+<i>
+</i>
+<span>Sound off</span>
+</button>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu</button>
+</header>
+<main>
+<section class="boardroom" id="boardroom">
+<div class="boardroom-copy">
+<p class="eyebrow">
+<span class="live-dot">
+</span> Summit network online</p>
+<h2>The world is<br>
+<em>in session.</em>
+</h2>
+<p>Eight rooms. One global table. Select a live node to enter a committee’s world.</p>
+<div class="event-pill">
+<span>28 & 29</span>
+<b>November 2026</b>
+<small>Masters’ Union School of Business<br>Gurugram, India</small>
+</div>
+</div>
+<div class="map-stage" id="mapStage">
+<div class="map-aura">
+</div>
+<div class="orbit o1">
+</div>
+<div class="orbit o2">
+</div>
+<svg class="world" viewBox="0 0 1000 520" role="img" aria-label="Interactive world map showing eight committee destinations">
+<defs>
+<filter id="glow">
+<feGaussianBlur stdDeviation="5" result="b"/>
+<feMerge>
+<feMergeNode in="b"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+<linearGradient id="landFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fb8a4" stop-opacity=".24"/><stop offset="1" stop-color="#385c4b" stop-opacity=".08"/></linearGradient>
+<radialGradient id="oceanGlow"><stop stop-color="#2a7455" stop-opacity=".14"/><stop offset="1" stop-color="#06100e" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse class="ocean-glow" cx="500" cy="260" rx="480" ry="245"/>
+<g class="latitudes">
+<path d="M40 160Q500 230 960 160M20 270Q500 340 980 270M60 380Q500 450 940 380"/>
+<path d="M250 35Q200 260 260 500M500 10Q470 260 500 510M750 35Q800 260 740 500"/>
+</g>
+<g class="land">
+<path d="M43 137l18-25 31-13 15-25 51-24 55 7 18 16 41 7 18 25 37 12 13 23 45 14-3 29-29 9-19 25-25-3-20 36-23 9-18-16-21 7-18-22-40-9-13-23-39-16-16-25-30-5-9-17z"/>
+<path d="M235 295l23-13 39 12 22 25 30 8 18 31-10 31-8 48-21 47-25 13-16-32-12-43-19-29 1-40-17-25z"/>
+<path d="M433 128l15-21 27-5 16-27 32-8 35 17 31-3 22 18 49 3 24 19 29-7 34 15 34-1 31 19 62-1 27 20 47 14 36 38-17 27-47 2-21 21-47-1-31 18-38-13-26 17-33-9-22-25-26-2-21-20-34 3-14-21-33 2-14-23-43 1-20-20-38 1-16-20-27-4-12-26z"/>
+<path d="M499 258l27-17 49 8 35 31 24 44-9 38-13 38-28 55-33-4-19-35-16-48-18-41-20-30z"/>
+<path d="M674 268l17-14 23 7 7 20-13 19-21-9zM748 288l19-4 12 22-12 31-14-15z"/>
+<path d="M827 380l31-20 46 7 20 18 35 15-8 31-33 10-29 29-42-8-24-29-24-14z"/>
+<path d="M891 456l13-4 7 16-10 20-12-8zM379 95l17-18 30 4 8 16-24 12z"/>
+</g>
+<g class="coast-lights"><circle cx="184" cy="154" r="2"/><circle cx="254" cy="191" r="2"/><circle cx="321" cy="343" r="2"/><circle cx="480" cy="154" r="2"/><circle cx="538" cy="184" r="2"/><circle cx="585" cy="320" r="2"/><circle cx="700" cy="241" r="2"/><circle cx="779" cy="213" r="2"/><circle cx="852" cy="235" r="2"/><circle cx="874" cy="397" r="2"/></g>
+<g class="routes" id="routes">
+</g>
+</svg>
+<div class="nodes" id="nodes">
+</div>
+<aside class="map-preview" id="mapPreview"><span id="previewNum">01</span><div><small id="previewCity">GENEVA</small><b id="previewCode">UNHRC</b><p id="previewAgenda">Addressing human trafficking across Asia and Africa.</p></div><i>ENTER ↗</i></aside>
+<div class="map-readout">
+<span>CURSOR <b id="coords">28.46°N / 77.02°E</b>
+</span>
+<span>ACTIVE ROOMS <b>08</b>
+</span>
+</div>
+</div>
+<div class="committee-rail" id="committeeRail">
+</div>
+<a href="#prizes" class="scroll-cue">Scroll to briefing <span>↓</span>
+</a>
+</section>
+<section class="manifesto section" id="prizes">
+<p class="eyebrow">The mandate</p>
+<div class="manifesto-grid">
+<h2>Not another conference.<br>
+<em>A room where history moves.</em>
+</h2>
+<div>
+<p>Debate live crises, negotiate impossible alliances and turn ideas into resolutions across two high-stakes days.</p>
+<div class="stats">
+<span>
+<b>08</b> Committees</span>
+<span>
+<b>02</b> Days</span>
+<span>
+<b>₹2.5L</b> Prize pool</span>
+</div>
+</div>
+</div>
+<div class="prize-grid">
+<article>
+<small>01 / EVERY COMMITTEE</small>
+<h3>Best Delegate</h3>
+<b>₹15,000</b>
+<p>For the most strategic, persuasive voice in the room.</p>
+</article>
+<article>
+<small>02 / EVERY COMMITTEE</small>
+<h3>High Commendation</h3>
+<b>₹10,000</b>
+<p>For exceptional diplomacy and command of committee.</p>
+</article>
+<article>
+<small>03 / SCHOOL CATEGORY</small>
+<h3>High Commendation</h3>
+<b>₹5,000</b>
+<p>Dedicated recognition for outstanding school delegates.</p>
+</article>
+<article class="ip-prize">
+<small>04 / INTERNATIONAL PRESS</small>
+<h3>Three disciplines</h3>
+<b>₹10,000</b>
+<p>Best journalist, photographer and caricaturist.</p>
+</article>
+</div>
+</section>
+<section class="applications section" id="applications">
+<div class="section-head">
+<div>
+<p class="eyebrow">Enter the room</p>
+<h2>Find your role<br>at the table.</h2>
+</div>
+<p>Delegate applications begin inside each committee dossier. Help build the summit through one of the roles below.</p>
+</div>
+<div class="role-list">
+<button data-apply="Chairperson">
+<span>01</span>
+<b>Chairperson</b>
+<small>Lead debate · Rule on procedure · Shape the room</small>
+<i>Apply ↗</i>
+</button>
+<button data-apply="Secretariat">
+<span>02</span>
+<b>Secretariat</b>
+<small>Build operations · Coordinate committees · Run the summit</small>
+<i>Apply ↗</i>
+</button>
+<button data-apply="Campus Ambassador">
+<span>03</span>
+<b>Campus Ambassador</b>
+<small>Represent MUN · Grow your delegation · Unlock benefits</small>
+<i>Apply ↗</i>
+</button>
+</div>
+</section>
+<section class="contact section" id="contact">
+<p class="eyebrow">Open channel</p>
+<h2>Let’s talk<br>
+<em>diplomacy.</em>
+</h2>
+<div class="contact-row">
+<a href="mailto:heer.chauhan_ugtbm2028@mastersunion.org">
+<small>ORGANISING COMMITTEE</small>
+<b>Heer Chauhan</b>
+<span>heer.chauhan_ugtbm2028@mastersunion.org</span>
+</a>
+<a href="mailto:ronit.pahuja_ugdsai2030@mastersunion.org">
+<small>ORGANISING COMMITTEE</small>
+<b>Ronit Pahuja</b>
+<span>ronit.pahuja_ugdsai2030@mastersunion.org</span>
+</a>
+<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Masters+Union+School+of+Business+Gurugram">
+<small>SUMMIT VENUE</small>
+<b>Masters’ Union</b>
+<span>Gurugram, Haryana ↗</span>
+</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="wordmark">
+<span>MU</span> Masters Union <b>Nations</b>
+</div>
+<p>28—29 NOVEMBER 2026 · GURUGRAM</p>
+<p>© 2026 MUN</p>
+</footer>
+<div class="transition" id="transition">
+<div class="transition-mark" id="transitionMark">
+</div>
+<p id="transitionText">
+</p>
+</div>
+<section class="dossier" id="dossier" aria-hidden="true">
+<button class="close" id="dossierClose" aria-label="Close dossier">Close ×</button>
+<div class="dossier-visual">
+<div class="crest" id="dossierCrest">
+</div>
+<p id="dossierCity">
+</p>
+<div class="visual-rings">
+</div>
+</div>
+<div class="dossier-content">
+<p class="eyebrow" id="dossierIndex">
+</p>
+<h2 id="dossierCode">
+</h2>
+<h3 id="dossierFull">
+</h3>
+<div class="agenda">
+<small>THE AGENDA</small>
+<p id="dossierAgenda">
+</p>
+</div>
+<div class="dossier-copy">
+<div>
+<small>BRIEFING</small>
+<p id="dossierIntro">
+</p>
+</div>
+<div>
+<small>IN THE ROOM</small>
+<p id="dossierExpect">
+</p>
+</div>
+</div>
+<div class="skill-row" id="skills">
+</div>
+<div class="dossier-actions">
+<button class="primary" id="dossierApply">Apply for this committee <b>→</b>
+</button>
+<button class="committee-sound" id="dossierSound" type="button"><span>■</span> Stop committee music</button>
+<p>
+<b>₹15K</b> Best Delegate · <b>₹10K</b> High Commendation</p>
+</div>
+</div>
+</section>
+<dialog class="modal" id="applyModal">
+<button class="close modal-close" data-close="applyModal">Close ×</button>
+<p class="eyebrow">Delegate onboarding</p>
+<h2 id="formTitle">Application</h2>
+<form id="applyForm">
+<div class="field-row">
+<label>Full name<input id="fName" name="name" required>
+</label>
+<label>Email<input name="email" type="email" required>
+</label>
+</div>
+<label>Applying for<select id="fRole" name="applyingFor">
+</select>
+</label>
+<label>Institution<input name="institution" required placeholder="School / university">
+</label>
+<label>Why do you want this seat?<textarea name="motivation" rows="4" required>
+</textarea>
+</label>
+<p class="form-note" id="formNote">
+</p>
+<button class="primary" type="submit">Proceed to registration <b>→</b>
+</button>
+<p class="secure-note">Application details are submitted through the configured registration endpoint.</p>
+</form>
+</dialog>
+<dialog class="modal studio-modal" id="studioModal">
+<button class="close modal-close" data-close="studioModal">Close ×</button>
+<div class="studio-head">
+<div>
+<p class="eyebrow">Virtual delegate ID studio</p>
+<h2>Make your identity official.</h2>
+</div>
+<span class="unlocked">● STUDIO UNLOCKED</span>
+</div>
+<div class="studio-grid">
+<form id="studioForm" class="studio-controls">
+<label>Name<input id="sName" maxlength="36">
+</label>
+<label>School / university<input id="sSchool" maxlength="54">
+</label>
+<label>Portfolio / country<input id="sPortfolio" maxlength="40" placeholder="e.g. Republic of India">
+</label>
+<label>Profile photo<input id="sPhoto" type="file" accept="image/*">
+</label>
+<div>
+<small>CARD FINISH</small>
+<div class="finish-picks">
+<button type="button" data-finish="glass" class="active">Glass</button>
+<button type="button" data-finish="obsidian">Obsidian</button>
+<button type="button" data-finish="ivory">Ivory</button>
+<button type="button" data-finish="foil">Foil</button>
+</div>
+</div>
+</form>
+<div class="canvas-side">
+<canvas id="cardCanvas" width="1080" height="1350">
+</canvas>
+<div>
+<button class="primary" id="cardDownload">Download PNG ↓</button>
+<button class="secondary" id="cardShare">Share card ↗</button>
+</div>
+</div>
+</div>
+</dialog>
+<div class="toast" id="toast">
+</div>
+<script src="assets/js/main.js">
+</script>
+</body>
+</html>

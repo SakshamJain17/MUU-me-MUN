@@ -1,0 +1,7 @@
+.claude/
+.vercel/
+*.log
+.DS_Store
+
+.vercel
+.env*
