@@ -22,6 +22,10 @@ python -m http.server 5173
 
 Then open http://localhost:5173.
 
+## Deployment
+
+The GitHub repository is connected to the Vercel project `muu-me-mun`. Pushes to `main` deploy to production automatically; pushes to other branches create preview deployments.
+
 ## Configure
 
 In `assets/js/main.js`:
