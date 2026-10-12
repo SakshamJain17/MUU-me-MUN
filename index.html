@@ -224,13 +224,36 @@
 <p>28—29 NOVEMBER 2026 · GURUGRAM</p>
 <p>© 2026 MUN</p>
 </footer>
-<div class="transition" id="transition">
-<div class="flight-stars" aria-hidden="true"></div>
-<div class="flight-route" aria-hidden="true"></div>
-<div class="arrival-portal" id="arrivalPortal"><span id="transitionMark"></span></div>
-<img class="delegate-rocket" src="assets/images/delegate-rocket.png" alt="A delegate riding a rocket to the selected committee">
-<div class="flight-copy"><small>DESTINATION LOCKED</small><b id="transitionText"></b><span>Entering committee space</span></div>
+<section class="street-sim" id="dalalStreet" aria-hidden="true" aria-label="Interactive Dalal Street district">
+<button class="street-close" id="streetClose" type="button" aria-label="Leave Dalal Street">Exit ×</button>
+<button class="street-sound" id="streetSound" type="button">■ Music off</button>
+<div class="street-sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="street-hud">
+<small>DALAL STREET · FINANCIAL DISTRICT</small>
+<h2>Choose your<br><em>market desk.</em></h2>
+<p>Walk to a building entrance. Your registration desk will open when you arrive.</p>
+<div class="ticker"><span>NIFTY 50&nbsp; ▲ 0.82%</span><span>SENSEX&nbsp; ▲ 612.14</span><span>INR / USD&nbsp; 83.12</span></div>
 </div>
+<div class="street-world" id="streetWorld">
+<button class="market-building exchange" data-building="Bombay Stock Exchange" style="--bx:17%;--by:10%">
+<span class="building-crown">BSE</span><span class="building-face"><i></i><i></i><i></i><i></i><b>Bombay Stock Exchange</b><small>Equities &amp; indices</small></span><span class="building-door">ENTER</span>
+</button>
+<button class="market-building regulator" data-building="Market Regulator" style="--bx:43%;--by:7%">
+<span class="building-crown">SEBI</span><span class="building-face"><i></i><i></i><i></i><i></i><b>Market Regulator</b><small>Rules &amp; surveillance</small></span><span class="building-door">ENTER</span>
+</button>
+<button class="market-building trading" data-building="Institutional Trading Floor" style="--bx:70%;--by:13%">
+<span class="building-crown">₹</span><span class="building-face"><i></i><i></i><i></i><i></i><b>Trading Floor</b><small>Deals &amp; strategy</small></span><span class="building-door">ENTER</span>
+</button>
+<div class="street-lane lane-a" aria-hidden="true"></div><div class="street-lane lane-b" aria-hidden="true"></div>
+<div class="street-prop bull" aria-hidden="true">♉</div><div class="street-prop lamp l1" aria-hidden="true"></div><div class="street-prop lamp l2" aria-hidden="true"></div>
+<div class="street-shadow" id="streetShadow" aria-hidden="true"></div>
+<div class="street-delegate" id="streetDelegate" aria-label="Your delegate"><span class="head"></span><span class="body"></span><span class="case"></span><span class="legs"></span></div>
+</div>
+<div class="street-controls" aria-label="Walking controls">
+<button type="button" data-walk="left" aria-label="Walk left">←</button><button type="button" data-walk="up" aria-label="Walk up">↑</button><button type="button" data-walk="down" aria-label="Walk down">↓</button><button type="button" data-walk="right" aria-label="Walk right">→</button>
+</div>
+<p class="street-tip" id="streetTip">Use arrow keys / WASD or tap a building to walk</p>
+</section>
 <section class="dossier" id="dossier" aria-hidden="true">
 <button class="close" id="dossierClose" aria-label="Close dossier">Close ×</button>
 <div class="dossier-visual">
