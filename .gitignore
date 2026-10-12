@@ -2,6 +2,7 @@
 .vercel/
 *.log
 .DS_Store
+.superdesign/tmp/
 
 .vercel
 .env*

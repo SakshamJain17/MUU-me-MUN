@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "targets": {
+    "dalal-street-simulation": {
+      "targetKind": "existing-ui",
+      "projectId": "fe3e217c-ad08-4009-8e06-787695c87aa9",
+      "activeDraftId": "24058c97-fa8f-4d01-9ad9-6ee7b261eb91",
+      "designSystemPath": ".superdesign/design-system.md",
+      "contextFiles": [
+        ".superdesign/design-system.md",
+        "index.html",
+        "assets/css/style.css",
+        "assets/js/main.js"
+      ],
+      "fingerprints": {
+        ".superdesign/design-system.md": "2a79044b29e2d72fc11e930be41119556058f8df78828400b37a34417e97c31a",
+        "index.html": "0ffb3861abca98ff99dab69f1a9aaffebc26563a25a719d84475e20775307594",
+        "assets/css/style.css": "8509538d1e49687ea60bca526f5cfca9fd592c7a30a40442596c95586c319ef8",
+        "assets/js/main.js": "17fec122f786412e828b8dacefa7907617a136a979ed3df89e40f7ee469e017c"
+      },
+      "components": [],
+      "drafts": {
+        "24058c97-fa8f-4d01-9ad9-6ee7b261eb91": {
+          "title": "3D Pixel Dalal Street",
+          "visualDirection": "original isometric pixel-art financial district",
+          "currentVersion": 1
+        }
+      },
+      "updatedAt": "2026-10-12T20:56:20+05:30"
+    }
+  }
+}
