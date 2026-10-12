@@ -1,6 +1,6 @@
-# Masters Union Nations
+# Masters Union Nation
 
-Website for the Masters Union Nations (MUN) conference, 28 & 29 November 2026, Masters' Union School of Business, Gurugram.
+Website for the Masters Union Nation (MUN) conference, 28 & 29 November 2026, Masters' Union School of Business, Gurugram.
 
 Static cinematic experience (HTML, CSS, vanilla JS) with no build step or dependencies.
 
