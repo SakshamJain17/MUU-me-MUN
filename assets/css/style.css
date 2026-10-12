@@ -191,8 +191,10 @@ footer{display:flex;justify-content:space-between;align-items:center;padding:2re
 .finish-picks button.active{border-color:var(--lime);color:var(--lime)}
 .canvas-side{text-align:center}
 .canvas-side canvas{width:min(100%,400px);height:auto;border-radius:18px;box-shadow:0 25px 50px #0009}
+.payment-panel{width:min(100%,520px);margin:18px auto 0;padding:16px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;text-align:left;border:1px solid rgba(201,255,86,.28);background:linear-gradient(135deg,rgba(201,255,86,.08),rgba(255,255,255,.025))}.payment-panel small{display:block;font:500 .5rem var(--mono);letter-spacing:.12em;color:var(--lime)}.payment-panel b{display:block;margin-top:4px;font-size:.9rem}.payment-panel p{margin:4px 0 0;font-size:.62rem;line-height:1.5;color:var(--muted)}.payment-panel .primary{width:auto;min-width:155px}.payment-panel.paid{border-color:#69e39c;background:rgba(105,227,156,.08)}.payment-panel.paid small,.payment-panel.paid p{color:#69e39c}
 .canvas-side>div{display:flex;gap:10px;margin:15px auto 0;max-width:400px}
 .secondary{display:block}
+.canvas-side button:disabled{cursor:not-allowed;opacity:.38;filter:grayscale(.6);transform:none}
 .toast{position:fixed;z-index:110;left:50%;bottom:25px;transform:translate(-50%,30px);opacity:0;padding:12px 18px;background:#e8ecdf;color:#132019;border-radius:3px;font:500 .6rem var(--mono);transition:.3s}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
@@ -249,7 +251,82 @@ footer{flex-direction:column;gap:1rem}
 .dossier-content h2{font-size:3.2rem}
 .contact h2{font-size:3.4rem}
 .canvas-side>div{flex-direction:column}
+.payment-panel{grid-template-columns:1fr}.payment-panel .primary{width:100%}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 .pointer-light{display:none}
+}
+
+/* Full-screen global route experience */
+body.map-mode{height:100dvh;overflow:hidden}
+body.map-mode main{height:100dvh;overflow:hidden}
+body.map-mode main>.section,body.map-mode footer{display:none}
+body.map-mode .nav nav{display:none}
+.nav{height:68px;background:linear-gradient(180deg,#030914e8,transparent);border:0;backdrop-filter:none;pointer-events:none}
+.nav .wordmark,.nav .sound,.nav .nav-toggle{pointer-events:auto}
+.sound{position:fixed;right:24px;bottom:22px;top:auto;z-index:95;width:50px;height:50px;justify-content:center;padding:0;border-color:#f3e7cf55;background:#07101ed9;box-shadow:0 12px 35px #0009;backdrop-filter:blur(16px)}
+.sound span{position:absolute;right:58px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:.25s;color:#f3eadc}
+.sound:hover span,.sound:focus-visible span{opacity:1;transform:none}
+.sound i{width:16px;height:16px;border-radius:2px;background:linear-gradient(90deg,#798088 15%,transparent 15% 28%,#798088 28% 43%,transparent 43% 56%,#798088 56% 72%,transparent 72% 84%,#798088 84%);clip-path:polygon(0 35%,16% 35%,16% 65%,31% 65%,31% 20%,47% 20%,47% 80%,62% 80%,62% 8%,78% 8%,78% 92%,94% 92%,94% 30%,100% 30%,100% 70%,84% 70%,84% 100%,56% 100%,56% 88%,38% 88%,38% 72%,9% 72%,9% 62%,0 62%)}
+.sound[aria-pressed=true] i{background:linear-gradient(90deg,#c9ff56 15%,transparent 15% 28%,#c9ff56 28% 43%,transparent 43% 56%,#c9ff56 56% 72%,transparent 72% 84%,#c9ff56 84%);filter:drop-shadow(0 0 7px #c9ff56)}
+
+.boardroom{height:100dvh;min-height:0;padding:0;display:block;background:#020814;overflow:hidden}
+.boardroom:before{display:none}
+.map-heading{position:absolute;z-index:8;top:84px;left:50%;transform:translateX(-50%);text-align:center;text-shadow:0 2px 20px #000;pointer-events:none}
+.map-heading p{display:inline;margin:0;font:500 .58rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#c5d3d6}
+.map-heading b{display:block;margin-top:8px;font:700 clamp(1.1rem,2vw,1.6rem) var(--sans);letter-spacing:-.03em;color:#fff5e6}
+.map-stage{position:absolute;inset:0;margin:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0;background:#020814 url("../images/world-atlas-india-focus.png") center/cover no-repeat;box-shadow:none;transform:none!important;cursor:default;overflow:hidden}
+.map-stage:before{inset:0;border:0;border-radius:0;background:linear-gradient(180deg,#02081470 0,transparent 18%,transparent 72%,#020814ba 100%);transform:none;z-index:1}
+.map-stage:after{content:"LIVE ROUTE / 08 DESTINATIONS";z-index:7;right:auto;left:4vw;top:auto;bottom:74px;color:#d7dfe0b5;transform:none}
+.map-aura{inset:0;background:radial-gradient(ellipse at 70% 50%,transparent 25%,#0208143d 76%,#020814b5);filter:none;pointer-events:none;z-index:1}
+.world{position:absolute;inset:0;z-index:3;width:100%;height:100%;filter:none;transform:none;pointer-events:none}
+.routes path{stroke:#55e7f2;stroke-width:2.2;stroke-dasharray:6 12;filter:drop-shadow(0 0 5px #31e7f2);opacity:.78}
+.nodes{position:absolute;inset:0;z-index:5}
+.node{transform:translate(-50%,-50%);z-index:6}
+.node-dot{width:16px;height:16px;border:3px solid #fff6e7;background:var(--c);box-shadow:0 0 8px #fff,0 0 24px var(--c)}
+.node-dot:after{width:38px;height:38px;left:-14px;top:-14px;border-width:2px}
+.node-label{left:23px;top:-8px;padding:5px 8px;border-radius:3px;background:#030915b8;font-size:.62rem;color:#fff7e9;box-shadow:0 8px 20px #0008}
+.node-label small{color:var(--c);margin-top:2px}
+.node:hover .node-dot,.node.active .node-dot{transform:scale(1.35);box-shadow:0 0 12px #fff,0 0 38px var(--c)}
+.map-preview{z-index:8;right:3.5vw;top:auto;bottom:110px;width:min(330px,28vw);border:1px solid #f5e7cf55;border-radius:12px;background:#06101be8;backdrop-filter:blur(15px);box-shadow:0 18px 50px #0008}
+.map-readout{z-index:7;bottom:74px;color:#b6c0c4;pointer-events:none}
+.committee-rail{position:absolute;z-index:9;left:50%;bottom:16px;transform:translateX(-50%);width:min(960px,72vw);display:grid;grid-template-columns:repeat(8,1fr);border:1px solid #f5e7cf42;border-radius:999px;overflow:hidden;background:#06101bd9;backdrop-filter:blur(15px);box-shadow:0 18px 50px #0007}
+.committee-rail button{padding:13px 8px;color:#acb8bc;border-right-color:#f5e7cf25}
+.committee-rail button:hover,.committee-rail button:focus-visible{background:var(--c);color:#07101a;outline:0}
+
+/* Rocket journey into a committee */
+.transition{z-index:78;display:block;background:radial-gradient(circle at 75% 48%,color-mix(in srgb,var(--tc) 20%,#08101f),#02050c 58%);clip-path:none;opacity:0;visibility:hidden;overflow:hidden;transition:opacity .25s,visibility .25s;isolation:isolate}
+.transition.go{clip-path:none;opacity:1;visibility:visible;pointer-events:auto}
+.flight-stars{position:absolute;inset:-30%;background-image:radial-gradient(circle,#fff 0 1px,transparent 1.8px),radial-gradient(circle,#73eaff 0 1px,transparent 2px),radial-gradient(circle,#ffc667 0 1px,transparent 2px);background-size:90px 90px,140px 140px,210px 210px;background-position:0 0,30px 50px,80px 20px;opacity:.65;transform:rotate(-12deg)}
+.go .flight-stars{animation:starRush 1.75s linear both}
+.flight-route{position:absolute;left:-15vw;top:63%;width:105vw;height:3px;transform:rotate(-16deg);transform-origin:left;background:linear-gradient(90deg,transparent,#5eefff 20%,#ffe06b 80%,transparent);box-shadow:0 0 12px #4ceaff,0 0 40px #ffca4b;opacity:0}
+.go .flight-route{animation:routeIgnite 1.65s .15s ease-out both}
+.delegate-rocket{position:absolute;z-index:3;width:clamp(300px,38vw,680px);left:-42vw;top:65%;transform:translateY(-50%) rotate(-12deg);filter:drop-shadow(0 25px 30px #000b)}
+.go .delegate-rocket{animation:rocketFlight 1.8s cubic-bezier(.2,.68,.28,1) both}
+.arrival-portal{position:absolute;z-index:2;right:7vw;top:46%;width:clamp(160px,22vw,360px);aspect-ratio:1;display:grid;place-items:center;border:7px solid var(--tc);border-radius:50%;color:var(--tc);font:800 clamp(1.1rem,2vw,2rem) var(--mono);box-shadow:0 0 20px var(--tc),0 0 90px color-mix(in srgb,var(--tc) 75%,transparent),inset 0 0 60px color-mix(in srgb,var(--tc) 55%,transparent);transform:translateY(-50%) scale(.15);opacity:0}
+.arrival-portal:before,.arrival-portal:after{content:"";position:absolute;inset:-18px;border:1px dashed #fff9;border-radius:50%;animation:spin 6s linear infinite}
+.arrival-portal:after{inset:-42px;border-color:color-mix(in srgb,var(--tc) 70%,transparent);animation-direction:reverse}
+.go .arrival-portal{animation:portalOpen 1.7s .1s cubic-bezier(.2,.8,.2,1) both}
+.flight-copy{position:absolute;z-index:4;left:5vw;top:14%;display:grid;gap:7px;text-transform:uppercase;letter-spacing:.12em;text-shadow:0 3px 18px #000}
+.flight-copy small{font:500 .55rem var(--mono);color:var(--tc)}
+.flight-copy b{font:800 clamp(2rem,5vw,5rem)/.9 var(--sans);letter-spacing:-.055em;text-transform:none;color:#fff5e8}
+.flight-copy span{font:500 .55rem var(--mono);color:#a8b4bd}
+@keyframes starRush{0%{transform:rotate(-12deg) translateX(0);filter:blur(0)}45%{filter:blur(1px)}100%{transform:rotate(-12deg) translateX(-28%);filter:blur(0)}}
+@keyframes routeIgnite{0%{opacity:0;clip-path:inset(0 100% 0 0)}25%{opacity:1}100%{opacity:.8;clip-path:inset(0 0 0 0)}}
+@keyframes rocketFlight{0%{left:-42vw;top:72%;transform:translateY(-50%) rotate(-12deg) scale(.75)}16%{left:4vw;top:64%;transform:translateY(-50%) rotate(-12deg) scale(1)}72%{left:52vw;top:47%;transform:translateY(-50%) rotate(-10deg) scale(.76)}100%{left:82vw;top:42%;transform:translateY(-50%) rotate(-8deg) scale(.15);opacity:.15}}
+@keyframes portalOpen{0%{transform:translateY(-50%) scale(.12) rotate(-40deg);opacity:0}30%,75%{transform:translateY(-50%) scale(1) rotate(0);opacity:1}100%{transform:translateY(-50%) scale(8);opacity:0}}
+
+@media(max-width:900px){
+  .nav{height:62px}.nav-toggle{display:none}.map-heading{top:70px;width:90%}
+  .map-stage{margin:0;aspect-ratio:auto;background-size:cover;background-position:center}
+  .committee-rail{width:92vw;grid-template-columns:repeat(4,1fr);border-radius:14px;bottom:14px}
+  .committee-rail button{padding:9px 5px}.map-readout,.map-stage:after{display:none}
+  .map-preview{display:none}.node-label{font-size:.52rem}.node-label small{display:block}
+  .sound{right:15px;bottom:84px;width:44px;height:44px}.sound span{display:none}
+  .delegate-rocket{width:76vw}.arrival-portal{right:-7vw}.flight-copy{top:10%}
+}
+@media(max-width:560px){
+  .boardroom{min-height:100dvh}.map-stage{background-size:auto 100%;background-position:53% center}
+  .committee-rail{grid-template-columns:repeat(4,1fr);width:94vw}.committee-rail button{font-size:.48rem}
+  .node-label{left:14px}.delegate-rocket{width:92vw}.arrival-portal{right:-20vw}
 }
