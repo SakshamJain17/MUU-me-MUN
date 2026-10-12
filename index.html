@@ -228,6 +228,8 @@
 <button class="street-close" id="streetClose" type="button" aria-label="Leave Dalal Street">Exit ×</button>
 <button class="street-sound" id="streetSound" type="button">■ Music off</button>
 <div class="street-sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<canvas class="dalal-canvas" id="dalalCanvas" aria-label="Playable 3D Dalal Street environment"></canvas>
+<div class="game-loader" id="gameLoader"><span></span><b>BUILDING DALAL STREET</b><small>Loading 3D financial district…</small></div>
 <div class="street-hud">
 <small>DALAL STREET · FINANCIAL DISTRICT</small>
 <h2>Choose your<br><em>market desk.</em></h2>
@@ -255,6 +257,7 @@
 <button type="button" data-walk="left" aria-label="Walk left">←</button><button type="button" data-walk="up" aria-label="Walk up">↑</button><button type="button" data-walk="down" aria-label="Walk down">↓</button><button type="button" data-walk="right" aria-label="Walk right">→</button>
 </div>
 <p class="street-tip" id="streetTip">Use arrow keys / WASD or tap a building to walk</p>
+<button class="building-interact" id="buildingInteract" type="button" hidden><kbd>E</kbd><span><small>INTERACT</small><b>Enter BSE registration desk</b></span></button>
 </section>
 <section class="dossier" id="dossier" aria-hidden="true">
 <button class="close" id="dossierClose" aria-label="Close dossier">Close ×</button>
