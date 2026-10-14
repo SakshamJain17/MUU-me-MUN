@@ -14,21 +14,21 @@
         "assets/js/dalal-3d.js"
       ],
       "fingerprints": {
-        ".superdesign/design-system.md": "4455edab00d7e0be4cdd5350219af636b74c73b0d7ab3aa68afca8d87219f36d",
+        ".superdesign/design-system.md": "d263c8e3ce890f9c6169f169153807363b250c5fef61e2555fd99565a0cf9d48",
         "index.html": "35cb6ad1f6121c3285fe475616e782c1f4790096de7c12ae15fab3e17c6162c3",
-        "assets/css/style.css": "1c0fcd3901dffa1132a2944d0f46d4700f0dd0ef6b7db45c757e43da6dca2b7a",
-        "assets/js/main.js": "6e1d0fd0822f59c1bd83cb7cd3d879bb67097f45874c19fb10a010782f887685",
-        "assets/js/dalal-3d.js": "06fb1190187812b6f05b7185a443b35d71a9c82198584333a03928eccae3f7c2"
+        "assets/css/style.css": "812e687c266e1fc1861b82104b3a11052554ac9dba01a7d91551b54f6b2732fa",
+        "assets/js/main.js": "870b0eacacd5834fe2ebbae84247f930a9ce9d7ba4d874a831c297a0c4a1f610",
+        "assets/js/dalal-3d.js": "7be465a8d4c210f2bfb7bed0c76018d126ce117027b6a2b2ca1da42622b0c42c"
       },
       "components": [],
       "drafts": {
         "24058c97-fa8f-4d01-9ad9-6ee7b261eb91": {
           "title": "3D Dalal Street Simulation",
-          "visualDirection": "geographically accurate world map with photoreal BSE, Chinnaswamy and Parliament walk-to-register venues",
+          "visualDirection": "geographically accurate world map with true 360-degree WebGL BSE, Chinnaswamy and Parliament game worlds",
           "currentVersion": 2
         }
       },
-      "updatedAt": "2026-10-14T12:52:00+05:30"
+      "updatedAt": "2026-10-14T13:20:00+05:30"
     }
   }
 }

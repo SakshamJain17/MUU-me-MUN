@@ -17,8 +17,9 @@ Preserve the existing conference identity, committee data, registration fields, 
 - Dalal Street: realistic South Mumbai/BSE-inspired dusk environment.
 - IPL: floodlit Chinnaswamy-inspired cricket stadium, field-level and live.
 - AIPPM: full Parliament-inspired building and ceremonial forecourt.
-- Render an original smooth 3D delegate over each cinematic environment.
-- WASD, arrow keys, and touch controls move the delegate toward an illuminated entrance marker.
+- Render each venue as real WebGL geometry rather than a flat photographic backdrop.
+- Use a third-person 360° orbit camera: drag to look in any direction, scroll to zoom, and move relative to the camera with WASD, arrow keys, or touch controls.
+- Include collision boundaries, soft shadows, atmospheric fog, architectural lighting, and an illuminated entrance beacon.
 - Proximity reveals the existing interaction prompt, then opens the correct committee registration and payment flow.
 
 ## UI treatment
