@@ -1,54 +1,36 @@
-# Masters Union Nation — Dalal Street Design System
+# Masters Union Nation — Cinematic Venue Design System
 
-## Product and target
+## Product and scope
 
-Masters Union Nation is a cinematic MUN conference site. The redesigned target is only the Dalal Street committee overlay entered from the existing Global Boardroom map. The map and all other screens remain unchanged.
+Masters Union Nation is an immersive MUN conference site. Preserve the Global Boardroom navigation, committee data, music, registration fields, delegate ID, Razorpay verification, and Vercel functions. Upgrade Dalal Street, IPL, and AIPPM into a shared third-person venue experience.
 
 ## Visual direction
 
-Create an original retro pixel-art financial district with a strong isometric 3D illusion. It may evoke classic top-down adventure games, but must not reproduce Pokémon characters, logos, maps, buildings, or proprietary assets. Buildings reference Indian capital markets: Bombay Stock Exchange, SEBI/market regulation, and an institutional trading floor.
+Photoreal architectural environments, not pixel art: a BSE-inspired Dalal Street at dusk, a live Chinnaswamy-inspired cricket stadium, and the complete new Parliament-inspired civic complex. Each scene uses a physically lit 3D delegate over an original cinematic environment plate, smooth WASD movement, a glowing entrance marker, and a proximity interaction prompt.
 
-## Palette
+## Palette and material
 
-- Night navy: `#07131b`
-- Deep road: `#151b20`
-- Slate facade: `#65737b`
-- Limestone: `#c9bfa4`
-- Brass gold: `#e5b765`
-- Terminal green: `#91f3a7`
-- Warm window: `#ffd47a`
-- Paper white: `#f5ecd8`
+- Royal velvet burgundy `#6d102f`
+- Deep velvet `#3b091d`
+- Black cherry `#10050a`
+- Warm brass `#d9b76e`
+- Porcelain `#f7eee9`
+- Muted mauve `#ae9ca3`
+
+Use smoked glass, subtle blur, thin brass rules, low-opacity reflections, and restrained cinematic bloom. Avoid neon arcade styling.
 
 ## Typography
 
-- Use DM Mono for all pixel-game UI, labels, prompts, and ticker information.
-- Use Manrope only for the large committee title when necessary to remain coherent with the parent site.
-- Render pixel lettering with hard shadows, no blur.
+Manrope for interface and large immersive titles, Playfair Display for elegant italic emphasis, and DM Mono only for live data and system readouts.
 
-## Geometry and depth
+## Interaction
 
-- Build the scene on an isometric ground plane using CSS 3D transforms and perspective.
-- Pixelated hard edges, stepped shadows, repeating tile textures, window grids, curbs, zebra crossings, lamps, and a bull sculpture.
-- Buildings need distinct silhouettes, visible roofs, front and side planes, doorway hit zones, and depth-consistent shadows.
-- UI HUD stays screen-space and does not tilt with the world.
+The world map uses burgundy atmospheric tint, brass routes, pointer parallax, drag rotation, glowing destinations, and live committee previews. Venue movement is continuous and smooth with WASD/arrows and touch controls. Reaching the entrance reveals an explicit interaction control and opens the existing registration flow.
 
-## Character and movement
+## Registration form
 
-- Original business-delegate sprite assembled from CSS pixel blocks.
-- Continuous requestAnimationFrame movement using delta time, velocity acceleration, friction, normalized diagonals, and collision clamping.
-- Held WASD/arrow keys, press-and-hold touch controls, and click/tap destination walking.
-- Character direction and walking animation respond continuously. Camera/world parallax follows subtly.
-- Entering a building triggers a pixel iris transition, registration form, then Razorpay with UPI QR option.
+Futuristic but credible: burgundy smoked-glass panel, rounded field capsules, warm brass microcopy, clear focus states, large editorial heading, secure-portal language, and a strong burgundy gradient call to action.
 
 ## Accessibility and responsive behavior
 
-- Buttons remain keyboard accessible and include clear labels.
-- Touch controls are large enough for mobile.
-- Reduced motion disables bobbing/parallax while preserving navigation.
-- Mobile preserves the complete scene with scaled isometric world and fixed HUD/controls.
-
-## Invariants
-
-- Do not alter the Global Boardroom map.
-- Do not alter committee data, music, registration fields, delegate ID, payment verification, or Vercel functions.
-- Do not use external copyrighted game assets.
+Maintain keyboard controls, visible focus, labeled buttons, touch controls, high contrast, and mobile-safe overlays. Reduced motion should preserve access to every action.

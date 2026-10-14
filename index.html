@@ -224,17 +224,17 @@
 <p>28—29 NOVEMBER 2026 · GURUGRAM</p>
 <p>© 2026 MUN</p>
 </footer>
-<section class="street-sim pixel-3d" id="dalalStreet" aria-hidden="true" aria-label="Interactive 3D pixel Dalal Street district">
-<button class="street-close" id="streetClose" type="button" aria-label="Leave Dalal Street">Exit ×</button>
+<section class="street-sim live-venue" id="dalalStreet" data-venue="DALAL" aria-hidden="true" aria-label="Interactive live committee venue">
+<button class="street-close" id="streetClose" type="button" aria-label="Leave committee venue">Exit ×</button>
 <button class="street-sound" id="streetSound" type="button">■ Music off</button>
 <div class="street-sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <canvas class="dalal-canvas" id="dalalCanvas" aria-label="Playable 3D Dalal Street environment"></canvas>
-<div class="game-loader" id="gameLoader"><span></span><b>BUILDING DALAL STREET</b><small>Loading 3D financial district…</small></div>
+<div class="game-loader" id="gameLoader"><span></span><b id="venueLoaderTitle">OPENING DALAL STREET</b><small id="venueLoaderCopy">Loading cinematic 3D environment…</small></div>
 <div class="street-hud">
-<small>DALAL STREET · FINANCIAL DISTRICT</small>
-<h2>Choose your<br><em>market desk.</em></h2>
-<p>Walk to a building entrance. Your registration desk will open when you arrive.</p>
-<div class="ticker"><span>NIFTY 50&nbsp; ▲ 0.82%</span><span>SENSEX&nbsp; ▲ 612.14</span><span>INR / USD&nbsp; 83.12</span></div>
+<small id="venueKicker">DALAL STREET · FINANCIAL DISTRICT</small>
+<h2 id="venueTitle">Walk into<br><em>the market.</em></h2>
+<p id="venueDescription">Approach the illuminated BSE entrance. Your registration desk will open when you arrive.</p>
+<div class="ticker" id="venueTicker"><span>NIFTY 50&nbsp; ▲ 0.82%</span><span>SENSEX&nbsp; ▲ 612.14</span><span>INR / USD&nbsp; 83.12</span></div>
 </div>
 <div class="street-world" id="streetWorld">
 <div class="iso-stage" id="isoStage">
@@ -256,7 +256,7 @@
 <div class="street-controls" aria-label="Walking controls">
 <button type="button" data-walk="left" aria-label="Walk left">←</button><button type="button" data-walk="up" aria-label="Walk up">↑</button><button type="button" data-walk="down" aria-label="Walk down">↓</button><button type="button" data-walk="right" aria-label="Walk right">→</button>
 </div>
-<p class="street-tip" id="streetTip">Use arrow keys / WASD or tap a building to walk</p>
+<p class="street-tip" id="streetTip">WASD / arrows to move · approach the entrance</p>
 <button class="building-interact" id="buildingInteract" type="button" hidden><kbd>E</kbd><span><small>INTERACT</small><b>Enter BSE registration desk</b></span></button>
 </section>
 <section class="dossier" id="dossier" aria-hidden="true">
