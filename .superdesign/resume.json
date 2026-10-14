@@ -14,21 +14,21 @@
         "assets/js/dalal-3d.js"
       ],
       "fingerprints": {
-        ".superdesign/design-system.md": "2a79044b29e2d72fc11e930be41119556058f8df78828400b37a34417e97c31a",
-        "index.html": "299103cc74ba9c3df9e3429ac8a8686143c574f2aef6cc6753ba70964b207120",
-        "assets/css/style.css": "48c4a1701fea4acb64ee1246a0e7cd059dde9a8371d0cd66f922dfbf81fa10ff",
-        "assets/js/main.js": "d55e3162171489957274a7e156fb8f370c486cb5bbafc53883eac9caf71a566c",
-        "assets/js/dalal-3d.js": "c375c154d2bf4121fa28d65e7d00de75a74f32a69a6da373ba47ee5226641aef"
+        ".superdesign/design-system.md": "4455edab00d7e0be4cdd5350219af636b74c73b0d7ab3aa68afca8d87219f36d",
+        "index.html": "35cb6ad1f6121c3285fe475616e782c1f4790096de7c12ae15fab3e17c6162c3",
+        "assets/css/style.css": "1c0fcd3901dffa1132a2944d0f46d4700f0dd0ef6b7db45c757e43da6dca2b7a",
+        "assets/js/main.js": "6e1d0fd0822f59c1bd83cb7cd3d879bb67097f45874c19fb10a010782f887685",
+        "assets/js/dalal-3d.js": "06fb1190187812b6f05b7185a443b35d71a9c82198584333a03928eccae3f7c2"
       },
       "components": [],
       "drafts": {
         "24058c97-fa8f-4d01-9ad9-6ee7b261eb91": {
           "title": "3D Dalal Street Simulation",
-          "visualDirection": "third-person WebGL Mumbai financial-district game with procedural BSE landmark",
+          "visualDirection": "geographically accurate world map with photoreal BSE, Chinnaswamy and Parliament walk-to-register venues",
           "currentVersion": 2
         }
       },
-      "updatedAt": "2026-10-12T21:13:00+05:30"
+      "updatedAt": "2026-10-14T12:52:00+05:30"
     }
   }
 }
